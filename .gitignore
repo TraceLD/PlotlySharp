@@ -3,3 +3,5 @@ TraceLd.PlotlySharp/TraceLd.PlotlySharp/obj
 TraceLd.PlotlySharp/.idea
 .gitignore~
 TraceLd.PlotlySharp/ConsoleApp1
+TraceLd.PlotlySharp/TraceLd.PlotlySharp.Example/bin
+TraceLd.PlotlySharp/TraceLd.PlotlySharp.Example/obj

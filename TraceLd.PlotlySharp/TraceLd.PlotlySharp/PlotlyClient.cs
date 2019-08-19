@@ -69,14 +69,14 @@ namespace TraceLd.PlotlySharp
             }
         }
         
-        public async Task<byte[]> GetPlotAsByteArray(string payload)
+        public async Task<byte[]> GetChartAsByteArray(string payload)
         {
             var imgRes = await PostReceiveByteArray(payload, "https://api.plot.ly/v2/images/");
 
             return imgRes;
         }
         
-        public async Task<byte[]> GetPlotAsByteArray(PlotPayload payload)
+        public async Task<byte[]> GetChartAsByteArray(PlotlyChart payload)
         {
             var serializedPayload = JsonConvert.SerializeObject(payload, 
                 Formatting.None, _serializerSettings);

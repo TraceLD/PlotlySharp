@@ -4,7 +4,7 @@ using TraceLd.PlotlySharp.NestedPayloadModels;
 
 namespace TraceLd.PlotlySharp
 {
-    public class PlotPayload
+    public class PlotlyChart
     {
         [JsonProperty("figure")]
         public Figure Figure { get; set; }
