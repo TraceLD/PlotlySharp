@@ -24,7 +24,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < -1)
                 {
-                    throw new ArgumentOutOfRangeException("NameLength must be greater than or equal to -1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"NameLength must be greater than or equal to -1");
                 }
 
                 _nameLength = value;

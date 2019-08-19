@@ -15,7 +15,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Duration must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Duration must be greater than or equal to 0");
                 }
 
                 _duration = value;

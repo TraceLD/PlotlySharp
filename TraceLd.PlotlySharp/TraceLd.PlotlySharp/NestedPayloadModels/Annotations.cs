@@ -21,23 +21,23 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("visible")]
         public bool Visible { get; set; } = true;
         [JsonProperty("x")]
-        public int X { get; set; }
+        public double X { get; set; }
         [JsonProperty("y")]
-        public int Y { get; set; }
+        public double Y { get; set; }
         [JsonProperty("z")]
-        public int Z { get; set; }
+        public double Z { get; set; }
         [JsonProperty("ax")]
-        public int Ax { get; set; }
+        public double Ax { get; set; }
         [JsonProperty("ay")]
-        public int Ay { get; set; }
+        public double Ay { get; set; }
         [JsonProperty("xanchor")]
         public string XAnchor { get; set; }
         [JsonProperty("xshift")]
-        public int XShift { get; set; }
+        public double XShift { get; set; }
         [JsonProperty("yanchor")]
         public string YAnchor { get; set; }
         [JsonProperty("yshift")]
-        public int YShift { get; set; }
+        public double YShift { get; set; }
         [JsonProperty("text")]
         public string Text { get; set; }
         [JsonProperty("textangle")]
@@ -53,7 +53,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("Width must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Width must be greater than or equal to 0");
                 }
 
                 _width = value;
@@ -68,7 +68,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("Height must be greater than or equal to 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Height must be greater than or equal to 1");
                 }
 
                 _height = value;
@@ -83,7 +83,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("Opacity must be greater than or equal to 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Opacity must be greater than or equal to 1");
                 }
 
                 _opacity = value;
@@ -107,7 +107,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("BorderPad must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"BorderPad must be greater than or equal to 0");
                 }
 
                 _borderPad = value;
@@ -122,7 +122,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("BorderPad must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"BorderPad must be greater than or equal to 0");
                 }
 
                 _borderWidth = value;
@@ -142,7 +142,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 8)
                 {
-                    throw new ArgumentOutOfRangeException("ArrowHead must be between or equal to 0 and 8");
+                    throw new ArgumentOutOfRangeException(nameof(value),"ArrowHead must be between or equal to 0 and 8");
                 }
 
                 _arrowHead = value;
@@ -157,7 +157,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 8)
                 {
-                    throw new ArgumentOutOfRangeException("StartArrowHead must be between or equal to 0 and 8");
+                    throw new ArgumentOutOfRangeException(nameof(value),"StartArrowHead must be between or equal to 0 and 8");
                 }
 
                 _startArrowHead = value;
@@ -175,7 +175,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0.3)
                 {
-                    throw new ArgumentOutOfRangeException("ArrowSize must be greater than or equal to 0.3");
+                    throw new ArgumentOutOfRangeException(nameof(value),"ArrowSize must be greater than or equal to 0.3");
                 }
 
                 _arrowSize = value;
@@ -190,7 +190,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0.3)
                 {
-                    throw new ArgumentOutOfRangeException("StartArrowSize must be greater than or equal to 0.3");
+                    throw new ArgumentOutOfRangeException(nameof(value),"StartArrowSize must be greater than or equal to 0.3");
                 }
 
                 _startArrowSize = value;
@@ -205,7 +205,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0.1)
                 {
-                    throw new ArgumentOutOfRangeException("StartArrowSize must be greater than or equal to 0.1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"StartArrowSize must be greater than or equal to 0.1");
                 }
 
                 _arrowWidth = value;
@@ -220,10 +220,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("StandOff must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"StandOff must be greater than or equal to 0");
                 }
 
-                _arrowWidth = value;
+                _standOff = value;
             }
         }
         
@@ -235,7 +235,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("StartStandOff must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"StartStandOff must be greater than or equal to 0");
                 }
 
                 _startStandOff = value;

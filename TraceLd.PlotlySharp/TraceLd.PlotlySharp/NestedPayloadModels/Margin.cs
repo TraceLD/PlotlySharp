@@ -5,20 +5,20 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Margin
     {
-        private int _l;
-        private int _t;
-        private int _b;
-        private int _pad;
+        private double _l;
+        private double _t;
+        private double _b;
+        private double _pad;
         
         [JsonProperty("l")]
-        public int L
+        public double L
         {
             get => _l;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("L must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"L must be greater than or equal to 0");
                 }
 
                 _l = value;
@@ -26,14 +26,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("t")]
-        public int T
+        public double T
         {
             get => _t;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("T must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"T must be greater than or equal to 0");
                 }
 
                 _t = value;
@@ -41,14 +41,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("b")]
-        public int B
+        public double B
         {
             get => _b;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("B must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"B must be greater than or equal to 0");
                 }
 
                 _b = value;
@@ -56,14 +56,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("pad")]
-        public int Pad
+        public double Pad
         {
             get => _pad;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Pad must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Pad must be greater than or equal to 0");
                 }
 
                 _pad = value;

@@ -5,10 +5,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
     public class Pad
     {
         [JsonProperty("t")]
-        public int T { get; set; }
+        public double T { get; set; }
         [JsonProperty("b")]
-        public int B { get; set; }
+        public double B { get; set; }
         [JsonProperty("l")]
-        public int L { get; set; }
+        public double L { get; set; }
     }
 }

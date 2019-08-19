@@ -19,7 +19,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("Rows must be greater than or equal to 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Rows must be greater than or equal to 1");
                 }
 
                 _rows = value;
@@ -37,7 +37,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 1)
                 {
-                    throw new ArgumentOutOfRangeException("Columns must be greater than or equal to 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Columns must be greater than or equal to 1");
                 }
 
                 _columns = value;
@@ -59,7 +59,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("XGap must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"XGap must be between or equal to 0 and 1");
                 }
 
                 _xGap = value;
@@ -74,7 +74,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("YGap must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"YGap must be between or equal to 0 and 1");
                 }
 
                 _yGap = value;

@@ -7,10 +7,18 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Layout
     {
-        private int _width;
-        private int _height;
+        private double _width;
+        private double _height;
         private int _hoverDistance;
         private int _spikeDistance;
+        private double _boxGap;
+        private double _boxGroupGap;
+        private double _barGap;
+        private double _barGroupGap;
+        private double _violinGap;
+        private double _violinGroupGap;
+        private double _waterfallGap;
+        private double _waterfallGroupGap;
         
         [JsonProperty("font")]
         public PlotlyFont Font { get; set; }
@@ -18,29 +26,29 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Title Title { get; set; }
         
         [JsonProperty("width")]
-        public int Width
+        public double Width
         {
             get => _width;
             set
             {
                 if (value < 10)
                 {
-                    throw new ArgumentOutOfRangeException("Width must be greater than or equal to 10");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Width must be greater than or equal to 10");
                 }
 
                 _width = value;
             }
         }
         
-        [JsonProperty("width")]
-        public int Height
+        [JsonProperty("height")]
+        public double Height
         {
             get => _height;
             set
             {
                 if (value < 10)
                 {
-                    throw new ArgumentOutOfRangeException("Height must be greater than or equal to 10");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Height must be greater than or equal to 10");
                 }
 
                 _height = value;
@@ -90,7 +98,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < -1)
                 {
-                    throw new ArgumentOutOfRangeException("HoverDistance must be greater than or equal to -1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"HoverDistance must be greater than or equal to -1");
                 }
 
                 _hoverDistance = value;
@@ -105,7 +113,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < -1)
                 {
-                    throw new ArgumentOutOfRangeException("SpikeDistance must be greater than or equal to -1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"SpikeDistance must be greater than or equal to -1");
                 }
 
                 _spikeDistance = value;
@@ -148,143 +156,155 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Annotations Annotations { get; set; }
         [JsonProperty("shapes")]
         public Shapes Shapes { get; set; }
-    }
-
-    public class Shapes
-    {
+        [JsonProperty("images")]
+        public Images Images { get; set; }
+        [JsonProperty("updatemenus")]
+        public Menus UpdateMenus { get; set; }
+        [JsonProperty("sliders")]
+        public Sliders Sliders { get; set; }
+        [JsonProperty("boxmode")]
+        public string BoxMode { get; set; }
         
-    }
-
-    public class Legend
-    {
-        private double _borderWidth;
-        private double _traceGroupGap;
-        private double _x;
-        private double _y;
-        
-        [JsonProperty("bgcolor")]
-        public string BgColor { get; set; }
-        [JsonProperty("bordercolor")]
-        public string BorderColor { get; set; }
-        
-        [JsonProperty("borderwidth")]
-        public double BorderWidth
+        [JsonProperty("boxgap")]
+        public double BoxGap
         {
-            get => _borderWidth;
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentOutOfRangeException("BorderWidth must be greater than or equal to 0");
-                }
-
-                _borderWidth = value;
-            }
-        }
-        
-        [JsonProperty("font")]
-        public PlotlyFont Font { get; set; }
-        [JsonProperty("orientation")]
-        public string Orientation { get; set; }
-        [JsonProperty("traceorder")]
-        public string TraceOrder { get; set; }
-        
-        [JsonProperty("tracegroupgap")]
-        public double TraceGroupGap
-        {
-            get => _traceGroupGap;
-            set
-            {
-                if (value < 0)
-                {
-                    throw new ArgumentOutOfRangeException("TraceGroupGap must be greater than or equal to 0");
-                }
-
-                _traceGroupGap = value;
-            }
-        }
-        
-        [JsonProperty("itmesizing")]
-        public string ItemSizing { get; set; }
-        [JsonProperty("itemclick")]
-        public string ItemClick { get; set; }
-        [JsonProperty("itemdoubleclick")]
-        public string ItemDoubleClick { get; set; }
-        
-        [JsonProperty("x")]
-        public double X
-        {
-            get => _x;
-            set
-            {
-                if (value < -2 || value > 3)
-                {
-                    throw new ArgumentOutOfRangeException("X must be between or equal to -2 and 3");
-                }
-
-                _x = value;
-            }
-        }
-        
-        [JsonProperty("xanchor")]
-        public string XAnchor { get; set; }
-        
-        [JsonProperty("y")]
-        public double Y
-        {
-            get => _y;
-            set
-            {
-                if (value < -2 || value > 3)
-                {
-                    throw new ArgumentOutOfRangeException("Y must be between or equal to -2 and 3");
-                }
-
-                _y = value;
-            }
-        }
-        
-        [JsonProperty("yanchor")]
-        public string YAnchor { get; set; }
-        [JsonProperty("uirevision")]
-        public string UiRevision { get; set; }
-        [JsonProperty("valign")]
-        public string VAlign { get; set; }
-    }
-
-    public class Polar
-    {
-        private double _hole;
-        
-        [JsonProperty("domain")]
-        public Domain Domain { get; set; }
-        [JsonProperty("sector")]
-        public List<double> Sector { get; set; }
-        
-        [JsonProperty("hole")]
-        public double Hole
-        {
-            get => _hole;
+            get => _boxGap;
             set
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("Hole must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"BoxGap must be between or equal to 0 and 1");
                 }
 
-                _hole = value;
+                _boxGap = value;
             }
         }
         
-        [JsonProperty("bgcolor")]
-        public string BgColor { get; set; }
-        [JsonProperty("radialaxis")]
-        public Axis RadialAxis { get; set; }
-        [JsonProperty("angularaxis")]
-        public Axis AngularAxis { get; set; }
-        [JsonProperty("gridshape")]
-        public string GridShape { get; set; }
-        [JsonProperty("uirevision")]
-        public string UiRevision { get; set; }
+        [JsonProperty("boxgroupgap")]
+        public double BoxGroupGap
+        {
+            get => _boxGroupGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"BoxGroupGap must be between or equal to 0 and 1");
+                }
+
+                _boxGroupGap = value;
+            }
+        }
+        
+        [JsonProperty("barmode")]
+        public string BarMode { get; set; }
+        [JsonProperty("barnorm")]
+        public string BarNorm { get; set; }
+        
+        [JsonProperty("bargap")]
+        public double BarGap
+        {
+            get => _barGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"BarGap must be between or equal to 0 and 1");
+                }
+
+                _barGap = value;
+            }
+        }
+        
+        [JsonProperty("bargroupgap")]
+        public double BarGroupGap
+        {
+            get => _barGroupGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"BarGroupGap must be between or equal to 0 and 1");
+                }
+
+                _barGroupGap = value;
+            }
+        }
+        
+        [JsonProperty("violinmode")]
+        public string ViolinMode { get; set; }
+        
+        [JsonProperty("violingap")]
+        public double ViolinGap
+        {
+            get => _violinGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"ViolinGap must be between or equal to 0 and 1");
+                }
+
+                _violinGap = value;
+            }
+        }
+        
+        [JsonProperty("violingroupgap")]
+        public double ViolinGroupGap
+        {
+            get => _violinGroupGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"ViolinGroupGap must be between or equal to 0 and 1");
+                }
+
+                _violinGroupGap = value;
+            }
+        }
+        
+        [JsonProperty("waterfallmode")]
+        public string WaterfallMode { get; set; }
+        
+        [JsonProperty("waterfallgap")]
+        public double WaterfallGap
+        {
+            get => _waterfallGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"WaterfallGap must be between or equal to 0 and 1");
+                }
+
+                _waterfallGap = value;
+            }
+        }
+        
+        [JsonProperty("waterfallgroupgap")]
+        public double WaterfallGroupGap
+        {
+            get => _waterfallGroupGap;
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),"WaterfallGroupGap must be between or equal to 0 and 1");
+                }
+
+                _waterfallGroupGap = value;
+            }
+        }
+        
+        [JsonProperty("hiddenlabels")]
+        public List<dynamic> HiddenLabels { get; set; }
+        [JsonProperty("piecolorway")]
+        public List<string> PieColorway { get; set; }
+        [JsonProperty("extendpiecolors")]
+        public bool ExtendPieColors { get; set; } = true;
+        [JsonProperty("sunburstcolorway")]
+        public List<string> SunBurstColorway { get; set; }
+        [JsonProperty("extendburstcolors")]
+        public bool ExtendBurstColors { get; set; } = true;
     }
 }

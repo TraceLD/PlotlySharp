@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Projection
     {
-        private int _scale;
+        private double _scale;
         
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -13,14 +13,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Rotation Rotation { get; set; }
         
         [JsonProperty("scale")]
-        public int Scale
+        public double Scale
         {
             get => _scale;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Scale must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Scale must be greater than or equal to 0");
                 }
 
                 _scale = value;

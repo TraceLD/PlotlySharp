@@ -6,12 +6,12 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Axis
     {
-        private int _scaleRatio;
-        private int _nTicks;
-        private int _tickLen;
-        private int _tickWidth;
-        private int _lineWidth;
-        private int _gridWidth;
+        private double _scaleRatio;
+        private double _nTicks;
+        private double _tickLen;
+        private double _tickWidth;
+        private double _lineWidth;
+        private double _gridWidth;
         private double _position;
         
         [JsonProperty("visible")]
@@ -34,14 +34,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string ScaleAnchor { get; set; }
 
         [JsonProperty("scaleratio")]
-        public int ScaleRatio
+        public double ScaleRatio
         {
             get => _scaleRatio;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("ScaleRatio must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"ScaleRatio must be greater than or equal to 0");
                 }
 
                 _scaleRatio = value;
@@ -58,14 +58,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string TickMode { get; set; }
         
         [JsonProperty("nticks")]
-        public int NTicks
+        public double NTicks
         {
             get => _nTicks;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("NTicks must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"NTicks must be greater than or equal to 0");
                 }
 
                 _nTicks = value;
@@ -88,14 +88,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string Mirror { get; set; }
         
         [JsonProperty("ticklen")]
-        public int Ticklen
+        public double Ticklen
         {
             get => _tickLen;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Ticklen must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Ticklen must be greater than or equal to 0");
                 }
 
                 _tickLen = value;
@@ -103,14 +103,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("tickwidth")]
-        public int TickWidth
+        public double TickWidth
         {
             get => _tickWidth;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("TickWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"TickWidth must be greater than or equal to 0");
                 }
 
                 _tickWidth = value;
@@ -128,7 +128,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("spikecolor")]
         public string SpikeColor { get; set; }
         [JsonProperty("spikethickness")]
-        public int SpikeThickness { get; set; }
+        public double SpikeThickness { get; set; }
         [JsonProperty("spikedash")]
         public string SpikeDash { get; set; }
         [JsonProperty("spikemode")]
@@ -165,14 +165,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string LineColor { get; set; }
         
         [JsonProperty("linewidth")]
-        public int LineWidth
+        public double LineWidth
         {
             get => _lineWidth;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("LineWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"LineWidth must be greater than or equal to 0");
                 }
 
                 _lineWidth = value;
@@ -185,14 +185,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string GridColor { get; set; }
         
         [JsonProperty("gridwidth")]
-        public int GridWidth
+        public double GridWidth
         {
             get => _gridWidth;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("GridWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"GridWidth must be greater than or equal to 0");
                 }
 
                 _gridWidth = value;
@@ -208,7 +208,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("dividercolor")]
         public string DividerColor { get; set; }
         [JsonProperty("dividerwidth")]
-        public int DividerWidth { get; set; }
+        public double DividerWidth { get; set; }
         [JsonProperty("anchor")]
         public string Anchor { get; set; }
         [JsonProperty("side")]
@@ -218,7 +218,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("layer")]
         public string Layer { get; set; }
         [JsonProperty("domain")]
-        public List<int> Domain { get; set; }
+        public Domain Domain { get; set; }
         
         [JsonProperty("position")]
         public double Position
@@ -228,7 +228,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("Position must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Position must be between or equal to 0 and 1");
                 }
 
                 _position = value;

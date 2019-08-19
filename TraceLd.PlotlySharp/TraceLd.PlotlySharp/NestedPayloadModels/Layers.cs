@@ -36,7 +36,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("Opacity must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Opacity must be between or equal to 0 and 1");
                 }
 
                 _opacity = value;
@@ -51,7 +51,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 24)
                 {
-                    throw new ArgumentOutOfRangeException("MinZoom must be between or equal to 0 and 24");
+                    throw new ArgumentOutOfRangeException(nameof(value),"MinZoom must be between or equal to 0 and 24");
                 }
 
                 _minZoom = value;
@@ -66,7 +66,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 24)
                 {
-                    throw new ArgumentOutOfRangeException("MaxZoom must be between or equal to 0 and 24");
+                    throw new ArgumentOutOfRangeException(nameof(value),"MaxZoom must be between or equal to 0 and 24");
                 }
 
                 _maxZoom = value;

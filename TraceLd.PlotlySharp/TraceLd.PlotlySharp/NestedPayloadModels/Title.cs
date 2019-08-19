@@ -25,7 +25,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0 || value > 1)
                 {
-                    throw new ArgumentOutOfRangeException("X must be between or equal to 0 and 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),"X must be between or equal to 0 and 1");
                 }
 
                 _x = value;

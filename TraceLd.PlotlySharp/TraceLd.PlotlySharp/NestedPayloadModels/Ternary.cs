@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Ternary
     {
-        private int _sum;
+        private double _sum;
         
         [JsonProperty("domain")]
         public Domain Domain { get; set; }
@@ -13,14 +13,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BgColor { get; set; }
         
         [JsonProperty("sum")]
-        public int Sum
+        public double Sum
         {
             get => _sum;
             set
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("Sum must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"Sum must be greater than or equal to 0");
                 }
 
                 _sum = value;

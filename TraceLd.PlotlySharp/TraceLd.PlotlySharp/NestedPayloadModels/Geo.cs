@@ -34,7 +34,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("CoastLineWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"CoastLineWidth must be greater than or equal to 0");
                 }
 
                 _coastLineWidth = value;
@@ -69,7 +69,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("RiverWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"RiverWidth must be greater than or equal to 0");
                 }
 
                 _riverWidth = value;
@@ -89,7 +89,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("CountryWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"CountryWidth must be greater than or equal to 0");
                 }
 
                 _countryWidth = value;
@@ -109,7 +109,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("SubunitWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"SubunitWidth must be greater than or equal to 0");
                 }
 
                 _subunitWidth = value;
@@ -129,7 +129,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
             {
                 if (value < 0)
                 {
-                    throw new ArgumentOutOfRangeException("FrameWidth must be greater than or equal to 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),"FrameWidth must be greater than or equal to 0");
                 }
 
                 _frameWidth = value;
