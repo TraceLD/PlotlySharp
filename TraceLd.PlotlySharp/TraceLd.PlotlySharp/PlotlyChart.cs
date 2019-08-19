@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using TraceLd.PlotlySharp.NestedPayloadModels;
+using TraceLd.PlotlySharp.ApiTypes;
 
 namespace TraceLd.PlotlySharp
 {
