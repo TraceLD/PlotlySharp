@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Ternary
     {
-        private double _sum;
+        private double? _sum;
         
         [JsonProperty("domain")]
         public Domain Domain { get; set; }
@@ -13,7 +13,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BgColor { get; set; }
         
         [JsonProperty("sum")]
-        public double Sum
+        public double? Sum
         {
             get => _sum;
             set

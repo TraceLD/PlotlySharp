@@ -5,13 +5,13 @@ namespace TraceLd.PlotlySharp
 {
     public class PlotlyFont
     {
-        private int _size;
+        private double? _size;
         
         [JsonProperty("family")]
         public string Family { get; set; }
         
         [JsonProperty("size")]
-        public int Size
+        public double? Size
         {
             get => _size;
             set

@@ -7,18 +7,18 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Layout
     {
-        private double _width;
-        private double _height;
-        private int _hoverDistance;
-        private int _spikeDistance;
-        private double _boxGap;
-        private double _boxGroupGap;
-        private double _barGap;
-        private double _barGroupGap;
-        private double _violinGap;
-        private double _violinGroupGap;
-        private double _waterfallGap;
-        private double _waterfallGroupGap;
+        private double? _width;
+        private double? _height;
+        private int? _hoverDistance;
+        private int? _spikeDistance;
+        private double? _boxGap;
+        private double? _boxGroupGap;
+        private double? _barGap;
+        private double? _barGroupGap;
+        private double? _violinGap;
+        private double? _violinGroupGap;
+        private double? _waterfallGap;
+        private double? _waterfallGroupGap;
         
         [JsonProperty("font")]
         public PlotlyFont Font { get; set; }
@@ -26,7 +26,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Title Title { get; set; }
         
         [JsonProperty("width")]
-        public double Width
+        public double? Width
         {
             get => _width;
             set
@@ -41,7 +41,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("height")]
-        public double Height
+        public double? Height
         {
             get => _height;
             set
@@ -66,7 +66,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("showlegend")]
         public bool ShowLegend { get; set; }
         [JsonProperty("colorway")]
-        public string Colorway { get; set; }
+        public List<string> Colorway { get; set; }
         [JsonProperty("datarevision")]
         public string DataRevision { get; set; }
         [JsonProperty("uirevision")]
@@ -91,7 +91,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string HoverMode { get; set; }
         
         [JsonProperty("hoverdistance")]
-        public int HoverDistance
+        public int? HoverDistance
         {
             get => _hoverDistance;
             set
@@ -106,7 +106,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("spikedistance")]
-        public int SpikeDistance
+        public int? SpikeDistance
         {
             get => _spikeDistance;
             set
@@ -149,7 +149,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("direction")]
         public string Direction { get; set; }
         [JsonProperty("orientation")]
-        public double Orientation { get; set; }
+        public double? Orientation { get; set; }
         [JsonProperty("legend")]
         public Legend Legend { get; set; }
         [JsonProperty("annotations")]
@@ -166,7 +166,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BoxMode { get; set; }
         
         [JsonProperty("boxgap")]
-        public double BoxGap
+        public double? BoxGap
         {
             get => _boxGap;
             set
@@ -181,7 +181,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("boxgroupgap")]
-        public double BoxGroupGap
+        public double? BoxGroupGap
         {
             get => _boxGroupGap;
             set
@@ -201,7 +201,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BarNorm { get; set; }
         
         [JsonProperty("bargap")]
-        public double BarGap
+        public double? BarGap
         {
             get => _barGap;
             set
@@ -216,7 +216,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("bargroupgap")]
-        public double BarGroupGap
+        public double? BarGroupGap
         {
             get => _barGroupGap;
             set
@@ -234,7 +234,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string ViolinMode { get; set; }
         
         [JsonProperty("violingap")]
-        public double ViolinGap
+        public double? ViolinGap
         {
             get => _violinGap;
             set
@@ -249,7 +249,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("violingroupgap")]
-        public double ViolinGroupGap
+        public double? ViolinGroupGap
         {
             get => _violinGroupGap;
             set
@@ -267,7 +267,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string WaterfallMode { get; set; }
         
         [JsonProperty("waterfallgap")]
-        public double WaterfallGap
+        public double? WaterfallGap
         {
             get => _waterfallGap;
             set
@@ -282,7 +282,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("waterfallgroupgap")]
-        public double WaterfallGroupGap
+        public double? WaterfallGroupGap
         {
             get => _waterfallGroupGap;
             set

@@ -5,11 +5,11 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Geo
     {
-        private double _coastLineWidth;
-        private double _riverWidth;
-        private double _countryWidth;
-        private double _subunitWidth;
-        private double _frameWidth;
+        private double? _coastLineWidth;
+        private double? _riverWidth;
+        private double? _countryWidth;
+        private double? _subunitWidth;
+        private double? _frameWidth;
         
         [JsonProperty("domain")]
         public Domain Domain { get; set; }
@@ -27,7 +27,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string CoastLineColor { get; set; }
         
         [JsonProperty("coastlinewidth")]
-        public double CoastLineWidth
+        public double? CoastLineWidth
         {
             get => _coastLineWidth;
             set
@@ -62,7 +62,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string RiverColor { get; set; }
         
         [JsonProperty("riverwidth")]
-        public double RiverWidth
+        public double? RiverWidth
         {
             get => _riverWidth;
             set
@@ -82,7 +82,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string CountryColor { get; set; }
         
         [JsonProperty("countrywidth")]
-        public double CountryWidth
+        public double? CountryWidth
         {
             get => _countryWidth;
             set
@@ -102,7 +102,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string SubunitColor { get; set; }
         
         [JsonProperty("subunitwidth")]
-        public double SubunitWidth
+        public double? SubunitWidth
         {
             get => _subunitWidth;
             set
@@ -121,8 +121,8 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("framecolor")]
         public string FrameColor { get; set; }
         
-        [JsonProperty("subunitwidth")]
-        public double FrameWidth
+        [JsonProperty("framewidth")]
+        public double? FrameWidth
         {
             get => _frameWidth;
             set

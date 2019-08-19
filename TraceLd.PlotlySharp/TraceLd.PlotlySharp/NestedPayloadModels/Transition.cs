@@ -5,10 +5,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Transition
     {
-        private int _duration;
+        private int? _duration;
         
         [JsonProperty("duration")]
-        public int Duration
+        public int? Duration
         {
             get => _duration;
             set

@@ -6,7 +6,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Polar
     {
-        private double _hole;
+        private double? _hole;
         
         [JsonProperty("domain")]
         public Domain Domain { get; set; }
@@ -14,7 +14,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public List<double> Sector { get; set; }
         
         [JsonProperty("hole")]
-        public double Hole
+        public double? Hole
         {
             get => _hole;
             set

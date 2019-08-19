@@ -5,9 +5,9 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Title
     {
-        private double _x;
-        private double _y;
-        
+        private double? _x;
+        private double? _y;
+
         [JsonProperty("text")]
         public string Text { get; set; }
         [JsonProperty("font")]
@@ -18,7 +18,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string YRef { get; set; }
         
         [JsonProperty("x")]
-        public double X
+        public double? X
         {
             get => _x;
             set
@@ -33,7 +33,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("y")]
-        public double Y
+        public double? Y
         {
             get => _y;
             set

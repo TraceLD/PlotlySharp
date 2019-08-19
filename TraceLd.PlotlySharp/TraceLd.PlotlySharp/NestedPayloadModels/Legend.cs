@@ -5,10 +5,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Legend
     {
-        private double _borderWidth;
-        private double _traceGroupGap;
-        private double _x;
-        private double _y;
+        private double? _borderWidth;
+        private double? _traceGroupGap;
+        private double? _x;
+        private double? _y;
         
         [JsonProperty("bgcolor")]
         public string BgColor { get; set; }
@@ -16,7 +16,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BorderColor { get; set; }
         
         [JsonProperty("borderwidth")]
-        public double BorderWidth
+        public double? BorderWidth
         {
             get => _borderWidth;
             set
@@ -38,7 +38,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string TraceOrder { get; set; }
         
         [JsonProperty("tracegroupgap")]
-        public double TraceGroupGap
+        public double? TraceGroupGap
         {
             get => _traceGroupGap;
             set
@@ -57,10 +57,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("itemclick")]
         public string ItemClick { get; set; }
         [JsonProperty("itemdoubleclick")]
-        public string ItemDoubleClick { get; set; }
+        public string ItemdoubleClick { get; set; }
         
         [JsonProperty("x")]
-        public double X
+        public double? X
         {
             get => _x;
             set
@@ -78,7 +78,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string XAnchor { get; set; }
         
         [JsonProperty("y")]
-        public double Y
+        public double? Y
         {
             get => _y;
             set

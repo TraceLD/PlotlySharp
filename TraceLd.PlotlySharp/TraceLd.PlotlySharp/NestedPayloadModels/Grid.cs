@@ -6,13 +6,13 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Grid
     {
-        private int _rows;
-        private int _columns;
-        private double _xGap;
-        private double _yGap;
+        private int? _rows;
+        private int? _columns;
+        private double? _xGap;
+        private double? _yGap;
         
         [JsonProperty("rows")]
-        public int Rows
+        public int? Rows
         {
             get => _rows;
             set
@@ -30,7 +30,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string RowOrder { get; set; }
         
         [JsonProperty("columns")]
-        public int Columns
+        public int? Columns
         {
             get => _columns;
             set
@@ -52,7 +52,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string Pattern { get; set; }
         
         [JsonProperty("xgap")]
-        public double XGap
+        public double? XGap
         {
             get => _xGap;
             set
@@ -67,7 +67,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("ygap")]
-        public double YGap
+        public double? YGap
         {
             get => _yGap;
             set

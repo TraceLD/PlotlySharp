@@ -5,9 +5,9 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Layers
     {
-        private double _opacity;
-        private double _minZoom;
-        private double _maxZoom;
+        private double? _opacity;
+        private double? _minZoom;
+        private double? _maxZoom;
         
         [JsonProperty("visible")]
         public bool Visible { get; set; } = true;
@@ -29,7 +29,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string Color { get; set; }
         
         [JsonProperty("opacity")]
-        public double Opacity
+        public double? Opacity
         {
             get => _opacity;
             set
@@ -44,7 +44,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("minzoom")]
-        public double MinZoom
+        public double? MinZoom
         {
             get => _minZoom;
             set
@@ -59,7 +59,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("maxzoom")]
-        public double MaxZoom
+        public double? MaxZoom
         {
             get => _maxZoom;
             set

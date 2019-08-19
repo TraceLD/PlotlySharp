@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class HoverLabel
     {
-        private int _nameLength;
+        private int? _nameLength;
         
         [JsonProperty("bgcolor")]
         public string BgColor { get; set; }
@@ -17,7 +17,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string Align { get; set; }
         
         [JsonProperty("namelength")]
-        public int NameLength
+        public int? NameLength
         {
             get => _nameLength;
             set

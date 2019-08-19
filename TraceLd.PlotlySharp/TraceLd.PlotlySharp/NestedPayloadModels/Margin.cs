@@ -5,13 +5,13 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Margin
     {
-        private double _l;
-        private double _t;
-        private double _b;
-        private double _pad;
+        private double? _l;
+        private double? _t;
+        private double? _b;
+        private double? _pad;
         
         [JsonProperty("l")]
-        public double L
+        public double? L
         {
             get => _l;
             set
@@ -26,7 +26,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("t")]
-        public double T
+        public double? T
         {
             get => _t;
             set
@@ -41,7 +41,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("b")]
-        public double B
+        public double? B
         {
             get => _b;
             set
@@ -56,7 +56,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("pad")]
-        public double Pad
+        public double? Pad
         {
             get => _pad;
             set

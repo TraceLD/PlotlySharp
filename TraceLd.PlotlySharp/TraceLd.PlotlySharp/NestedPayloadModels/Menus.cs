@@ -5,10 +5,10 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Menus
     {
-        private double _active;
-        private double _x;
-        private double _y;
-        private double _borderWidth;
+        private double? _active;
+        private double? _x;
+        private double? _y;
+        private double? _borderWidth;
         
         [JsonProperty("visible")]
         public bool Visible { get; set; }
@@ -18,7 +18,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string Direction { get; set; }
         
         [JsonProperty("active")]
-        public double Active
+        public double? Active
         {
             get => _active;
             set
@@ -38,7 +38,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Buttons Buttons { get; set; }
         
         [JsonProperty("x")]
-        public double X
+        public double? X
         {
             get => _x;
             set
@@ -56,7 +56,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string XAnchor { get; set; }
         
         [JsonProperty("y")]
-        public double Y
+        public double? Y
         {
             get => _y;
             set
@@ -82,7 +82,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BorderColor { get; set; }
         
         [JsonProperty("borderwidth")]
-        public double BorderWidth
+        public double? BorderWidth
         {
             get => _borderWidth;
             set

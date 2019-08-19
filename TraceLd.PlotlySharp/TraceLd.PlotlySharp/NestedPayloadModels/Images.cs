@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Images
     {
-        private double _opacity;
+        private double? _opacity;
 
         [JsonProperty("visible")]
         public bool Visible { get; set; } = true;
@@ -14,14 +14,14 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("layer")]
         public string Layer { get; set; }
         [JsonProperty("sizex")]
-        public double SizeX { get; set; }
+        public double? SizeX { get; set; }
         [JsonProperty("sizey")]
-        public double SizeY { get; set; }
+        public double? SizeY { get; set; }
         [JsonProperty("sizing")]
         public string Sizing { get; set; }
         
         [JsonProperty("opacity")]
-        public double Opacity
+        public double? Opacity
         {
             get => _opacity;
             set
@@ -36,9 +36,9 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("x")]
-        public double X { get; set; }
+        public double? X { get; set; }
         [JsonProperty("y")]
-        public double Y { get; set; }
+        public double? Y { get; set; }
         [JsonProperty("xanchor")]
         public string XAnchor { get; set; }
         [JsonProperty("yanchor")]

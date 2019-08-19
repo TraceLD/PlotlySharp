@@ -13,11 +13,11 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("center")]
         public LonLat Center { get; set; }
         [JsonProperty("zoom")]
-        public double Zoom { get; set; }
+        public double? Zoom { get; set; }
         [JsonProperty("bearing")]
-        public double Bearing { get; set; }
+        public double? Bearing { get; set; }
         [JsonProperty("pitch")]
-        public double Pitch { get; set; }
+        public double? Pitch { get; set; }
         [JsonProperty("layers")]
         public Layers Layers { get; set; }
     }

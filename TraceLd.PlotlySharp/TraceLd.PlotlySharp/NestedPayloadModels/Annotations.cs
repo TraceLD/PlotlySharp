@@ -5,48 +5,48 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Annotations
     {
-        private double _width;
-        private double _height;
-        private double _opacity;
-        private double _borderPad;
-        private double _borderWidth;
-        private int _arrowHead;
-        private int _startArrowHead;
-        private double _arrowSize;
-        private double _startArrowSize;
-        private double _arrowWidth;
-        private double _standOff;
-        private double _startStandOff;
+        private double? _width;
+        private double? _height;
+        private double? _opacity;
+        private double? _borderPad;
+        private double? _borderWidth;
+        private int? _arrowHead;
+        private int? _startArrowHead;
+        private double? _arrowSize;
+        private double? _startArrowSize;
+        private double? _arrowWidth;
+        private double? _standOff;
+        private double? _startStandOff;
         
         [JsonProperty("visible")]
         public bool Visible { get; set; } = true;
         [JsonProperty("x")]
-        public double X { get; set; }
+        public double? X { get; set; }
         [JsonProperty("y")]
-        public double Y { get; set; }
+        public double? Y { get; set; }
         [JsonProperty("z")]
-        public double Z { get; set; }
+        public double? Z { get; set; }
         [JsonProperty("ax")]
-        public double Ax { get; set; }
+        public double? Ax { get; set; }
         [JsonProperty("ay")]
-        public double Ay { get; set; }
+        public double? Ay { get; set; }
         [JsonProperty("xanchor")]
         public string XAnchor { get; set; }
         [JsonProperty("xshift")]
-        public double XShift { get; set; }
+        public double? XShift { get; set; }
         [JsonProperty("yanchor")]
         public string YAnchor { get; set; }
         [JsonProperty("yshift")]
-        public double YShift { get; set; }
+        public double? YShift { get; set; }
         [JsonProperty("text")]
         public string Text { get; set; }
         [JsonProperty("textangle")]
-        public double TextAngle { get; set; }
+        public double? TextAngle { get; set; }
         [JsonProperty("font")]
         public PlotlyFont Font { get; set; }
         
         [JsonProperty("width")]
-        public double Width
+        public double? Width
         {
             get => _width;
             set
@@ -61,7 +61,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("height")]
-        public double Height
+        public double? Height
         {
             get => _height;
             set
@@ -76,7 +76,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("opacity")]
-        public double Opacity
+        public double? Opacity
         {
             get => _opacity;
             set
@@ -100,7 +100,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BorderColor { get; set; }
         
         [JsonProperty("borderpad")]
-        public double BorderPad
+        public double? BorderPad
         {
             get => _borderPad;
             set
@@ -115,7 +115,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("borderwidth")]
-        public double BorderWidth
+        public double? BorderWidth
         {
             get => _borderWidth;
             set
@@ -135,7 +135,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string ArrowColor { get; set; }
         
         [JsonProperty("arrowhead")]
-        public int ArrowHead
+        public int? ArrowHead
         {
             get => _arrowHead;
             set
@@ -150,7 +150,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("startarrowhead")]
-        public int StartArrowHead
+        public int? StartArrowHead
         {
             get => _startArrowHead;
             set
@@ -168,7 +168,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string ArrowSide { get; set; }
         
         [JsonProperty("arrowsize")]
-        public double ArrowSize 
+        public double? ArrowSize 
         {
             get => _arrowSize;
             set
@@ -183,7 +183,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("startarrowsize")]
-        public double StartArrowSize 
+        public double? StartArrowSize 
         {
             get => _startArrowSize;
             set
@@ -198,7 +198,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("arrowwidth")]
-        public double ArrowWidth 
+        public double? ArrowWidth 
         {
             get => _arrowWidth;
             set
@@ -213,7 +213,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("standoff")]
-        public double StandOff 
+        public double? StandOff 
         {
             get => _standOff;
             set
@@ -228,7 +228,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("startstandoff")]
-        public double StartStandOff 
+        public double? StartStandOff 
         {
             get => _startStandOff;
             set

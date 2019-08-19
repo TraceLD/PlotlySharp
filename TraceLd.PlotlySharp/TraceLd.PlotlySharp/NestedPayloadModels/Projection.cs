@@ -5,7 +5,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Projection
     {
-        private double _scale;
+        private double? _scale;
         
         [JsonProperty("type")]
         public string Type { get; set; }
@@ -13,7 +13,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public Rotation Rotation { get; set; }
         
         [JsonProperty("scale")]
-        public double Scale
+        public double? Scale
         {
             get => _scale;
             set

@@ -5,6 +5,6 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
     public class Line
     {
         [JsonProperty("width")]
-        public double Width { get; set; }
+        public double? Width { get; set; }
     }
 }

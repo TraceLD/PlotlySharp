@@ -5,20 +5,20 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
 {
     public class Sliders
     {
-        private double _active;
-        private double _len;
-        private double _x;
-        private double _y;
-        private double _borderWidth;
-        private double _tickLen;
-        private double _tickWidth;
-        private double _minorTickLen;
+        private double? _active;
+        private double? _len;
+        private double? _x;
+        private double? _y;
+        private double? _borderWidth;
+        private double? _tickLen;
+        private double? _tickWidth;
+        private double? _minorTickLen;
         
         [JsonProperty("visible")]
         public bool Visible { get; set; } = true;
         
         [JsonProperty("active")]
-        public double Active
+        public double? Active
         {
             get => _active;
             set
@@ -37,7 +37,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         [JsonProperty("lenmode")]
         public string LenMode { get; set; }
         [JsonProperty("len")]
-        public double Len
+        public double? Len
         {
             get => _len;
             set
@@ -52,7 +52,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("x")]
-        public double X
+        public double? X
         {
             get => _x;
             set
@@ -72,7 +72,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string XAnchor { get; set; }
         
         [JsonProperty("y")]
-        public double Y
+        public double? Y
         {
             get => _y;
             set
@@ -102,7 +102,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         public string BorderColor { get; set; }
         
         [JsonProperty("borderwidth")]
-        public double BorderWidth
+        public double? BorderWidth
         {
             get => _borderWidth;
             set
@@ -117,7 +117,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("ticklen")]
-        public double TickLen
+        public double? TickLen
         {
             get => _tickLen;
             set
@@ -132,7 +132,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("tickwidth")]
-        public double TickWidth
+        public double? TickWidth
         {
             get => _tickWidth;
             set
@@ -147,7 +147,7 @@ namespace TraceLd.PlotlySharp.NestedPayloadModels
         }
         
         [JsonProperty("minorticklen")]
-        public double MinorTickLen
+        public double? MinorTickLen
         {
             get => _minorTickLen;
             set
