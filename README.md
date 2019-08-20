@@ -6,6 +6,21 @@
 
 ## Installation
 
+**Package Manager**
+```
+PM> Install-Package TraceLd.PlotlySharp
+```
+
+**.NET CLI**
+```
+dotnet add package TraceLd.PlotlySharp
+```
+
+**Paket CLI**
+```
+paket add TraceLd.PlotlySharp
+```
+
 ## Usage
 
 ### Create a chart using the built-in PlotlyChart type
