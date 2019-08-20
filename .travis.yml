@@ -1,0 +1,7 @@
+language: csharp
+mono: none
+dotnet: 2.2.401
+dist: trusty
+script:
+ - dotnet restore ./TraceLd.PlotlySharp/TraceLd.PlotlySharp.sln
+ - dotnet dotnet build -c Release ./TraceLd.PlotlySharp/TraceLd.PlotlySharp.sln
