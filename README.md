@@ -2,7 +2,11 @@
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://github.com/TraceLD/PlotlySharp/blob/master/LICENSE)
 ![Framework](https://img.shields.io/badge/framework-netstandard2.0-brightgreen)
+
+[![nuget](https://img.shields.io/nuget/vpre/TraceLd.PlotlySharp)](https://www.nuget.org/packages/TraceLd.PlotlySharp/)
 [![Build Status](https://travis-ci.org/TraceLD/PlotlySharp.svg?branch=master)](https://travis-ci.org/TraceLD/PlotlySharp)
+
+https://img.shields.io/nuget/vpre/TraceLd.PlotlySharp
 
 ## Installation
 
