@@ -2,6 +2,18 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.0-alpha</PackageVersion>
+        <Title>TraceLd.PlotlySharp</Title>
+        <Authors>TraceLd</Authors>
+        <Description>Unofficial C# wrapper for Plotly's Streaming and REST APIs</Description>
+        <Copyright>TraceLd</Copyright>
+        <PackageProjectUrl>https://github.com/TraceLD/PlotlySharp</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/TraceLD/PlotlySharp/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/TraceLD/PlotlySharp</RepositoryUrl>
+        <RepositoryType>https://github.com/TraceLD/PlotlySharp/tree/master/TraceLd.PlotlySharp/TraceLd.PlotlySharp</RepositoryType>
+        <PackageTags>plotly, chart, charts, plots, plot, plot.ly, api</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
