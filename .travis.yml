@@ -3,4 +3,4 @@ mono: none
 dotnet: 2.2
 script:
  - dotnet restore ./TraceLd.PlotlySharp/TraceLd.PlotlySharp.sln
- - dotnet dotnet build -c Release ./TraceLd.PlotlySharp/TraceLd.PlotlySharp.sln
+ - dotnet build -c Release ./TraceLd.PlotlySharp/TraceLd.PlotlySharp.sln
