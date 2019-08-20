@@ -27,7 +27,7 @@ dotnet add package TraceLd.PlotlySharp --version 1.0.0-alpha
 ```
 paket add TraceLd.PlotlySharp --version 1.0.0-alpha
 ```
-Or simply add the package via your IDE's NuGet package manager.
+or simply add the package via your IDE's NuGet package manager.
 
 ## Usage
 
