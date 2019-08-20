@@ -35,6 +35,8 @@ This method currently supports only the following chart types:
 
 If the chart you're using is not on that list, you can either create it using a JSON Object string (this will be explained later in this document) or you can try using the generic `Trace` type.
 
+To see all possible properties and what they are responsible for click [here](https://plot.ly/javascript/reference/).
+
 ```cs
 // very basic example, hardcoding credentials is HIGHLY not recommended
 PlotlyCredentials Func() => new PlotlyCredentials {Username = "username", Token = "token"};
@@ -72,8 +74,6 @@ using (var fileStream = File.Create("example1.png"))
     imgStream.CopyTo(fileStream);
 }
 ```
-
-To see what all properties are responsible for click [here](https://plot.ly/javascript/reference/).
 
 You can see this example in more detail [here](https://github.com/TraceLD/PlotlySharp/tree/master/TraceLd.PlotlySharp/TraceLd.PlotlySharp.Example).
 
