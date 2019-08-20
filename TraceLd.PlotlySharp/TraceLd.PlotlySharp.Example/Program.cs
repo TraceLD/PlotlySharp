@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using TraceLd.PlotlySharp;
 using TraceLd.PlotlySharp.ApiTypes;
+using TraceLd.PlotlySharp.ApiTypes.Traces;
 
 namespace TraceLd.PlotlySharp.Example
 {
@@ -22,7 +25,7 @@ namespace TraceLd.PlotlySharp.Example
              */
             
             // very basic example, hardcoding credentials is HIGHLY not recommended
-            PlotlyCredentials Func() => new PlotlyCredentials {Username = "my_username", Token = "my_token"};
+            PlotlyCredentials Func() => new PlotlyCredentials {Username = "private_plotly", Token = "k0yy0ztssk"};
 
             // create a plotly client that will communicate with Plotly API
             PlotlyClient plotlyClient = new PlotlyClient(Client, Func);
@@ -32,16 +35,14 @@ namespace TraceLd.PlotlySharp.Example
             {
                 Figure = new Figure
                 {
-                    Data = new List<Trace> { new Trace
+                    Data = new ArrayList { new BarTrace
                     {
-                        X = new List<int> {1, 2, 3},
-                        Y = new List<int> {1, 2, 3},
-                        Type = "bar"
-                    }, new Trace
+                        X = new ArrayList {1, 2, 3},
+                        Y = new ArrayList {1, 2, 3},
+                    }, new BarTrace
                     {
-                        X = new List<int> {1, 2, 3},
-                        Y = new List<int> {1, 2, 3},
-                        Type = "bar"
+                        X = new ArrayList {1, 2, 3},
+                        Y = new ArrayList {1, 2, 3},
                     }},
                     Layout = new Layout
                     {
@@ -72,6 +73,28 @@ namespace TraceLd.PlotlySharp.Example
             using (var fileStream = File.Create("example1.png"))
             {
                 imgStream.CopyTo(fileStream);
+            }
+            
+            Thread.Sleep(2000);
+            
+            /*
+             * Example 2
+             * 
+             * Example of how to generate a chart using a JSON object string
+             * and save it to a PNG file
+             */
+            
+            // must be escaped
+            var escapedJsonObjectString = "{\"figure\": {\"data\": [{\"y\": [10, 10, 2, 20]}], \"layout\": {\"width\": 700}}, \"width\": 1000, \"height\": 500, \"format\": \"png\", \"encoded\": false}";
+
+            byte[] myImg2 = await plotlyClient.GetChartAsByteArray(escapedJsonObjectString);
+            
+            // save it to a file
+            var imgStream2 = new MemoryStream(myImg2);
+            
+            using (var fileStream = File.Create("example2.png"))
+            {
+                imgStream2.CopyTo(fileStream);
             }
         }
     }

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -6,9 +7,9 @@ namespace TraceLd.PlotlySharp.ApiTypes
     public class Trace
     {
         [JsonProperty("x")]
-        public List<int> X { get; set; }
+        public ArrayList X { get; set; }
         [JsonProperty("y")]
-        public List<int> Y { get; set; }
+        public ArrayList Y { get; set; }
         [JsonProperty("text")]
         public List<string> Text { get; set; }
         [JsonProperty("textposition")]

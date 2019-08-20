@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceLd.PlotlySharp", "TraceLd.PlotlySharp\TraceLd.PlotlySharp.csproj", "{537A688A-8363-40B4-84CE-44799B9E3067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1FF75ED0-372D-4847-B159-ADC58177F52A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceLd.PlotlySharp.Example", "TraceLd.PlotlySharp.Example\TraceLd.PlotlySharp.Example.csproj", "{048F38CA-1330-4653-9684-61836C3A2AEF}"
 EndProject
 Global
@@ -16,10 +14,6 @@ Global
 		{537A688A-8363-40B4-84CE-44799B9E3067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{537A688A-8363-40B4-84CE-44799B9E3067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{537A688A-8363-40B4-84CE-44799B9E3067}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FF75ED0-372D-4847-B159-ADC58177F52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FF75ED0-372D-4847-B159-ADC58177F52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FF75ED0-372D-4847-B159-ADC58177F52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FF75ED0-372D-4847-B159-ADC58177F52A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{048F38CA-1330-4653-9684-61836C3A2AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{048F38CA-1330-4653-9684-61836C3A2AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048F38CA-1330-4653-9684-61836C3A2AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
