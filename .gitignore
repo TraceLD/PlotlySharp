@@ -1,4 +1,4 @@
 .gitignore~
-TraceLd.PlotlySharp/.idea
 bin/
 obj/
+.idea/
