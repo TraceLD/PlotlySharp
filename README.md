@@ -54,6 +54,7 @@ using TraceLd.PlotlySharp.Api.Traces;
 PlotlyCredentials Func() => new PlotlyCredentials {Username = "username", Token = "token"};
 
 // create a plotly client that will communicate with Plotly API
+// provide your own HttpClient
 PlotlyClient plotlyClient = new PlotlyClient(Client, Func);
 
 // create a chart
@@ -102,6 +103,7 @@ using TraceLd.PlotlySharp;
 PlotlyCredentials Func() => new PlotlyCredentials {Username = "username", Token = "token"};
 
 // create a plotly client that will communicate with Plotly API
+// provide your own HttpClient
 PlotlyClient plotlyClient = new PlotlyClient(Client, Func);
 
 // create a chart using a JSON object string (must be escaped)
