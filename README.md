@@ -23,11 +23,6 @@ PM> Install-Package TraceLd.PlotlySharp
 dotnet add package TraceLd.PlotlySharp
 ```
 
-**PackageReference**
-```xml
-<PackageReference Include="TraceLd.PlotlySharp" Version="1.0.1" />
-```
-
 **Paket CLI**
 ```
 paket add TraceLd.PlotlySharp
