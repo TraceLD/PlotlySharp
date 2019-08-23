@@ -25,11 +25,11 @@ namespace TraceLd.PlotlySharp.Example
              */
             
             // very basic example, hardcoding credentials is HIGHLY not recommended
-            PlotlyCredentials Func() => new PlotlyCredentials {Username = "private_plotly", Token = "k0yy0ztssk"};
+            PlotlyCredentials Func() => new PlotlyCredentials { Username = "plotly_username", Token = "plotly_token" };
 
             // create a plotly client that will communicate with Plotly API
             PlotlyClient plotlyClient = new PlotlyClient(Client, Func);
-            
+
             // create a chart
             PlotlyChart myChart = new PlotlyChart
             {
@@ -39,39 +39,23 @@ namespace TraceLd.PlotlySharp.Example
                     {
                         X = new ArrayList {1, 2, 3},
                         Y = new ArrayList {1, 2, 3},
-                        
                     }, new BarTrace
                     {
                         X = new ArrayList {1, 2, 3},
                         Y = new ArrayList {1, 2, 3},
                     }},
-                    Layout = new Layout
-                    {
-                        Colorway = new List<string> { "#636efa","#EF553B","#00cc96","#ab63fa","#19d3f3","#e763fa","#fecb52","#ffa15a","#ff6692","#b6e880" },
-                        Title = new Title
-                        {
-                            Text = ""
-                        },
-                        PaperBgColor = "#1a1a23",
-                        PlotBgColor = "#1a1a23",
-                        Font = new Font
-                        {
-                            Color = "#ebebeb"
-                        }
-                    }
                 },
-                Format = "png",
                 Height = 1000,
                 Width = 1000
             };
-            
+
             // send the chart to Plotly to compute an image and receive it as a PNG file as byte array
             byte[] myImg = await plotlyClient.GetChartAsByteArray(myChart);
-            
+
             // save it to a file
-            MemoryStream imgStream = new MemoryStream(myImg);
-            
-            using (FileStream fileStream = File.Create("example1.png"))
+            var imgStream = new MemoryStream(myImg);
+
+            using (var fileStream = File.Create("example1.png"))
             {
                 imgStream.CopyTo(fileStream);
             }
