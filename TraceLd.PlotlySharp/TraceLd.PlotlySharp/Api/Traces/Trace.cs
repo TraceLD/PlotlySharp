@@ -125,5 +125,8 @@ namespace TraceLd.PlotlySharp.Api.Traces
         
         [JsonProperty("error_y")]
         public Error ErrorY { get; set; }
+        
+        [JsonProperty("colorbar")]
+        public BarDto ColorBar { get; set; }
     }
 }
