@@ -3,7 +3,7 @@
 **This document only shows examples of how to use the `PlotlyChart` type. To see complete examples of how to generate an image from a `PlotlyChart` object, see the main README.**
 
 ## Bar
-![Imgur](https://i.imgur.com/kza2Dlwh.png)
+![Imgur](https://i.imgur.com/kza2Dlw.png)
 
 ```cs
 PlotlyChart myChart = new PlotlyChart
@@ -89,7 +89,7 @@ PlotlyChart myChart = new PlotlyChart
 ```
 
 ## Contour
-![Imgur](https://i.imgur.com/2leyBw5h.png)
+![Imgur](https://i.imgur.com/2leyBw5.png)
 
 ```cs
 PlotlyChart myChart = new PlotlyChart
@@ -128,7 +128,7 @@ PlotlyChart myChart = new PlotlyChart
 ```
 
 ## Heatmap
-![Imgur](https://i.imgur.com/UfAMO1lh.png)
+![Imgur](https://i.imgur.com/UfAMO1l.png)
 
 ```cs
 Figure = new Figure
@@ -162,7 +162,7 @@ Width = 1000
 ```
 
 ## Pie
-![Imgur](https://i.imgur.com/pgPu4J8h.png)
+![Imgur](https://i.imgur.com/pgPu4J8.png)
 
 ```cs
 PlotlyChart myChart = new PlotlyChart
