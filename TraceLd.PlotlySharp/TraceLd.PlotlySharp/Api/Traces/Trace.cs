@@ -73,7 +73,7 @@ namespace TraceLd.PlotlySharp.Api.Traces
         public double? Dy { get; set; }
         
         [JsonProperty("text")]
-        public List<string> Text { get; set; }
+        public string Text { get; set; }
         
         [JsonProperty("hovertext")]
         public string HoverText { get; set; }
