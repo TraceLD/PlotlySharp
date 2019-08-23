@@ -6,6 +6,11 @@
 [![nuget](https://img.shields.io/nuget/vpre/TraceLd.PlotlySharp)](https://www.nuget.org/packages/TraceLd.PlotlySharp/)
 [![Build Status](https://travis-ci.org/TraceLD/PlotlySharp.svg?branch=master)](https://travis-ci.org/TraceLD/PlotlySharp)
 
+[![example](https://i.imgur.com/kza2Dlwt.png)](https://github.com/TraceLD/PlotlySharp/blob/master/MORE_EXAMPLES.md)
+[![example](https://i.imgur.com/2leyBw5t.png)](https://github.com/TraceLD/PlotlySharp/blob/master/MORE_EXAMPLES.md)
+[![example](https://i.imgur.com/UfAMO1lt.png)](https://github.com/TraceLD/PlotlySharp/blob/master/MORE_EXAMPLES.md)
+[![example](https://i.imgur.com/pgPu4J8t.png)](https://github.com/TraceLD/PlotlySharp/blob/master/MORE_EXAMPLES.md)
+
 ## Installation
 
 **Package Manager**
