@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using TraceLd.PlotlySharp.ApiTypes;
+using TraceLd.PlotlySharp.Api;
 
 namespace TraceLd.PlotlySharp
 {

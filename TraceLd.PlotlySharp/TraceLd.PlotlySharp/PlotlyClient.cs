@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace TraceLd.PlotlySharp
 {
-    public class PlotlyClient : IDisposable
+    public class PlotlyClient : IDisposable, IPlotlyClient
     {
         private readonly HttpClient _httpClient;
         private readonly bool _ownsHttpClient;
@@ -41,7 +41,7 @@ namespace TraceLd.PlotlySharp
         {
             if (_credProvider is null)
             {
-                throw new AuthenticationException();
+                throw new AuthenticationException("credProvider can't be null");
             }
             
             var creds = _credProvider();
@@ -69,16 +69,16 @@ namespace TraceLd.PlotlySharp
             }
         }
         
-        public async Task<byte[]> GetChartAsByteArray(string payload)
+        public async Task<byte[]> GetChartAsByteArray(string chartJsonObjectString)
         {
-            var imgRes = await PostReceiveByteArray(payload, "https://api.plot.ly/v2/images/");
+            var imgRes = await PostReceiveByteArray(chartJsonObjectString, "https://api.plot.ly/v2/images/");
 
             return imgRes;
         }
         
-        public async Task<byte[]> GetChartAsByteArray(PlotlyChart payload)
+        public async Task<byte[]> GetChartAsByteArray(PlotlyChart plotlyChart)
         {
-            var serializedPayload = JsonConvert.SerializeObject(payload, 
+            var serializedPayload = JsonConvert.SerializeObject(plotlyChart, 
                 Formatting.None, _serializerSettings);
             
             var imgRes = await PostReceiveByteArray(serializedPayload, "https://api.plot.ly/v2/images/");

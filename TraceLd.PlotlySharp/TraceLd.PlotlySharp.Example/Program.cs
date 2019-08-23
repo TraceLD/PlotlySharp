@@ -6,8 +6,8 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using TraceLd.PlotlySharp;
-using TraceLd.PlotlySharp.ApiTypes;
-using TraceLd.PlotlySharp.ApiTypes.Traces;
+using TraceLd.PlotlySharp.Api;
+using TraceLd.PlotlySharp.Api.Traces;
 
 namespace TraceLd.PlotlySharp.Example
 {
@@ -39,6 +39,7 @@ namespace TraceLd.PlotlySharp.Example
                     {
                         X = new ArrayList {1, 2, 3},
                         Y = new ArrayList {1, 2, 3},
+                        
                     }, new BarTrace
                     {
                         X = new ArrayList {1, 2, 3},
@@ -53,7 +54,7 @@ namespace TraceLd.PlotlySharp.Example
                         },
                         PaperBgColor = "#1a1a23",
                         PlotBgColor = "#1a1a23",
-                        Font = new PlotlyFont
+                        Font = new Font
                         {
                             Color = "#ebebeb"
                         }
@@ -68,9 +69,9 @@ namespace TraceLd.PlotlySharp.Example
             byte[] myImg = await plotlyClient.GetChartAsByteArray(myChart);
             
             // save it to a file
-            var imgStream = new MemoryStream(myImg);
+            MemoryStream imgStream = new MemoryStream(myImg);
             
-            using (var fileStream = File.Create("example1.png"))
+            using (FileStream fileStream = File.Create("example1.png"))
             {
                 imgStream.CopyTo(fileStream);
             }
@@ -90,9 +91,9 @@ namespace TraceLd.PlotlySharp.Example
             byte[] myImg2 = await plotlyClient.GetChartAsByteArray(escapedJsonObjectString);
             
             // save it to a file
-            var imgStream2 = new MemoryStream(myImg2);
+            MemoryStream imgStream2 = new MemoryStream(myImg2);
             
-            using (var fileStream = File.Create("example2.png"))
+            using (FileStream fileStream = File.Create("example2.png"))
             {
                 imgStream2.CopyTo(fileStream);
             }
