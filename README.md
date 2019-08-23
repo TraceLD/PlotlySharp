@@ -10,22 +10,22 @@
 
 **Package Manager**
 ```
-PM> Install-Package TraceLd.PlotlySharp -Version 1.0.0-alpha
+PM> Install-Package TraceLd.PlotlySharp
 ```
 
 **.NET CLI**
 ```
-dotnet add package TraceLd.PlotlySharp --version 1.0.0-alpha
+dotnet add package TraceLd.PlotlySharp
 ```
 
 **PackageReference**
 ```xml
-<PackageReference Include="TraceLd.PlotlySharp" Version="1.0.0-alpha" />
+<PackageReference Include="TraceLd.PlotlySharp" Version="1.0.0" />
 ```
 
 **Paket CLI**
 ```
-paket add TraceLd.PlotlySharp --version 1.0.0-alpha
+paket add TraceLd.PlotlySharp
 ```
 or simply add the package via your IDE's NuGet package manager.
 
@@ -42,6 +42,12 @@ This method currently supports only the following chart types:
 If the chart you're using is not on that list, you can either create it using a JSON Object string (this will be explained later in this document) or you can try using the generic `Trace` type.
 
 To see all possible properties and what they are responsible for click [here](https://plot.ly/javascript/reference/). The C# types are a direct map from plotly's JSON objects.
+
+```cs
+using TraceLd.PlotlySharp;
+using TraceLd.PlotlySharp.Api;
+using TraceLd.PlotlySharp.Api.Traces;
+```
 
 ```cs
 // very basic example, hardcoding credentials is HIGHLY not recommended
@@ -86,6 +92,10 @@ You can see this example in more detail [here](https://github.com/TraceLD/Plotly
 
 ### Create a chart using a JSON object string
 This method supports everything that the plot.ly API supports. For all possible chart options click [here](https://plot.ly/javascript/reference/).
+
+```cs
+using TraceLd.PlotlySharp;
+```
 
 ```cs
 // very basic example, hardcoding credentials is HIGHLY not recommended
