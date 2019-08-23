@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace TraceLd.PlotlySharp.Api
@@ -27,6 +28,6 @@ namespace TraceLd.PlotlySharp.Api
         [JsonProperty("uirevision")]
         public string UiRevision { get; set; }
         [JsonProperty("annotations")]
-        public Annotations Annotations { get; set; }
+        public List<Annotation> Annotations { get; set; }
     }
 }

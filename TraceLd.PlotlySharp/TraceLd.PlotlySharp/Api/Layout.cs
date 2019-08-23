@@ -152,7 +152,7 @@ namespace TraceLd.PlotlySharp.Api
         [JsonProperty("legend")]
         public Legend Legend { get; set; }
         [JsonProperty("annotations")]
-        public Annotations Annotations { get; set; }
+        public List<Annotation> Annotations { get; set; }
         [JsonProperty("shapes")]
         public Shapes Shapes { get; set; }
         [JsonProperty("images")]

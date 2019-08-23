@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace TraceLd.PlotlySharp.Api
 {
-    public class Annotations
+    public class Annotation
     {
         private double? _width;
         private double? _height;
