@@ -93,7 +93,7 @@ You can see this example in more detail [here](https://github.com/TraceLD/Plotly
 
 
 ### Create a chart using a JSON object string
-This method supports everything that the plot.ly API supports. For all possible chart options click [here](https://plot.ly/javascript/reference/).
+This method supports everything that the plot.ly API supports (supports all chart types that Plotly provides). For all possible chart options click [here](https://plot.ly/javascript/reference/).
 
 ```cs
 using TraceLd.PlotlySharp;
