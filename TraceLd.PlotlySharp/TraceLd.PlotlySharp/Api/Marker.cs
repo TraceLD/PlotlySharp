@@ -87,7 +87,7 @@ namespace TraceLd.PlotlySharp.Api
         public Gradient Gradient { get; set; }
         
         [JsonProperty("color")]
-        public List<string> Color { get; set; }
+        public string Color { get; set; }
         
         [JsonProperty("cauto")]
         public bool CAuto { get; set; } = true;

@@ -13,17 +13,18 @@ namespace TraceLd.PlotlySharp.Api
         private double? _lineWidth;
         private double? _gridWidth;
         private double? _position;
-        
+
         [JsonProperty("visible")]
-        public bool Visible { get; set; }
+        public bool Visible { get; set; } = true;
         [JsonProperty("color")]
         public string Color { get; set; }
         [JsonProperty("title")]
         public Title Title { get; set; }
         [JsonProperty("type")]
         public string Type { get; set; }
+
         [JsonProperty("autorange")]
-        public bool AutoRange { get; set; }
+        public bool AutoRange { get; set; } = true;
         [JsonProperty("rangemode")]
         public string RangeMode { get; set; }
         [JsonProperty("range")]
@@ -119,8 +120,9 @@ namespace TraceLd.PlotlySharp.Api
         
         [JsonProperty("tickcolor")]
         public string TickColor { get; set; }
+
         [JsonProperty("showticklabels")]
-        public bool ShowTickLabels { get; set; }
+        public bool ShowTickLabels { get; set; } = true;
         [JsonProperty("automargin")]
         public bool AutoMargin { get; set; }
         [JsonProperty("showspikes")]
@@ -203,8 +205,9 @@ namespace TraceLd.PlotlySharp.Api
         public bool ZeroLine { get; set; }
         [JsonProperty("zerolinecolor")]
         public string ZeroLineColor { get; set; }
+
         [JsonProperty("showdividers")]
-        public bool ShowDividers { get; set; }
+        public bool ShowDividers { get; set; } = true;
         [JsonProperty("dividercolor")]
         public string DividerColor { get; set; }
         [JsonProperty("dividerwidth")]
