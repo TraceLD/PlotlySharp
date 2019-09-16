@@ -45,6 +45,8 @@ If the chart you're using is not on that list, you can either create it using a 
 
 To see all possible properties and what they are responsible for click [here](https://plot.ly/javascript/reference/). The C# types are a direct map from plotly's JSON objects.
 
+To see more examples of how to use the `PlotlyChart` type click [here](https://github.com/TraceLD/PlotlySharp/blob/master/MORE_EXAMPLES.md).
+
 ```cs
 using TraceLd.PlotlySharp;
 using TraceLd.PlotlySharp.Api;
